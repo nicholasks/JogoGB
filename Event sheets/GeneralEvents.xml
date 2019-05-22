@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GeneralEvents</name>
+    <events>
+        <include>PlayerEvents</include>
+        <include>EnemyEvents</include>
+        <event-block sid="225693580965712">
+            <conditions>
+                <condition id="4" name="On finished" sid="597780983759043" type="Explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="680741685928520" type="Explosion" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

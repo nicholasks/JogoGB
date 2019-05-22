@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerEvents</name>
+    <events>
+        <event-group description="" sid="654352328526839" title="Controls">
+            <sub-events>
+                <event-block sid="426897805734641">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="934188208226159" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="966901944484185" type="Player">
+                            <param id="0" name="Object">PlayerBox</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="132193610973164">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="512901453545054" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="672763310311572" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="267434612341764">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="169909215236687" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="994715013642352" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="119304501792637">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="734686244224650" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="493259694464950" type="Player">
+                            <param id="0" name="Object">ColliderLevelOut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="224702117362383" type="Player" />
+                        <action id="-9" name="Destroy" sid="589298044921075" type="PlayerBox" />
+                        <action id="-25" name="Go to layout (by name)" sid="361564147063250" type="System">
+                            <param id="0" name="Layout">ColliderLevelOut.GoToLevel</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="458141128651581" title="Destroy">
+            <sub-events>
+                <event-block sid="764731656499797">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="174847592411262" type="Player">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="994825447688442" type="Player" />
+                        <action id="-26" name="Restart layout" sid="169819601077714" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="205309555567928">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="247345402196987" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="678024393702064" type="PlayerBox" />
+                        <action id="-9" name="Destroy" sid="335481730269017" type="Player" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="251881377064216" title="Colisions">
+            <sub-events>
+                <event-block sid="629387568468856">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="774355134250309" type="PlayerBox">
+                            <param id="0" name="Object">Frog</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="598152152283550">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="217007537908576" type="PlayerBox" />
+                                <condition id="-2" name="Compare Y" sid="701377400303099" type="PlayerBox">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Frog.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="527874809094256" type="PlayerBox">
+                                    <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="700503812001043" type="Frog">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="789416144918764" type="Frog" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="817864996234544">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="220402453175284" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="943447879532160" type="Player">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="536162306610248" type="Player">
+                                    <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="738884422002453" title="Animations">
+            <sub-events>
+                <event-block sid="992198927568782">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="844445877492953" type="Player">
+                            <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="878311235667090" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
