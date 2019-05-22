@@ -151,5 +151,32 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block any="1" sid="537346187510447">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="888114512237499" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="751927690989298" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="634968546728139" type="Player">
+                    <param id="0" name="Animation">&quot;Running&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="942745128367551">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="125618275723178" type="PlayerBox" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="467053871858520" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
