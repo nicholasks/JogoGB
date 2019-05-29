@@ -229,6 +229,13 @@
                     <frame duration="1" hotspotX="0.52381" hotspotY="1" />
                     <frame duration="1" hotspotX="0.52381" hotspotY="1" />
                 </animation>
+                <animation framecount="2" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="958513219167872" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\alu201522594\Desktop\JogoGB\Sprites_Original_Files\Sunny-land-files\PNG\sprites\player\jump\player-jump-1.png" />
+                    <frame duration="1" hotspotX="0.521739" hotspotY="1" original-source="C:\Users\alu201522594\Desktop\JogoGB\Sprites_Original_Files\Sunny-land-files\PNG\sprites\player\jump\player-jump-2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="818825394115278" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="1" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="PlayerBox" sid="210634724279296">

@@ -251,7 +251,7 @@
                                         <condition id="9" name="Is overlapping at offset" sid="395223703473578" type="PlayerBox">
                                             <param id="0" name="Object">S_Ladder_Bottom</param>
                                             <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">5</param>
+                                            <param id="2" name="Offset Y">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -329,12 +329,12 @@
                 <action behavior="8Direction" id="8" name="Set enabled" sid="224430813509224" type="PlayerBox">
                     <param id="0" name="State">1</param>
                 </action>
-                <action behavior="Platform" id="9" name="Set vector Y" sid="198588432634813" type="PlayerBox">
-                    <param id="0" name="Vector Y">PlayerBox.Y + 3</param>
-                </action>
                 <action id="-10" name="Set value" sid="237828241885161" type="PlayerBox">
                     <param id="0" name="Instance variable">Movement</param>
                     <param id="1" name="Value">&quot;Climbing&quot;</param>
+                </action>
+                <action id="-2" name="Set Y" sid="268410964871267" type="PlayerBox">
+                    <param id="0" name="Y">PlayerBox.Y +5</param>
                 </action>
             </actions>
         </event-block>
@@ -461,6 +461,67 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="535222787864843">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="374276770528708" type="PlayerBox" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="955928841941465" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="117448755028845">
+            <conditions>
+                <condition id="4" name="On finished" sid="819148603980335" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="997223944095374" type="Player">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="244887785595357">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="628192237288466" type="PlayerBox" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="692865237445407" type="Player" />
+                <action id="4" name="Set animation" sid="818551588556460" type="Player">
+                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985256693983069">
+            <conditions>
+                <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="588678525251869" type="PlayerBox" />
+                <condition id="2" name="Is playing" sid="694471433064335" type="Player">
+                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="544217640989180" type="Player" />
+            </actions>
+            <sub-events>
+                <event-block sid="312761544408977">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="214395243079490" type="PlayerBox" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="144224314731660" type="PlayerBox" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="261909557018802" type="Player">
+                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
