@@ -438,6 +438,30 @@
         <object-type name="Function" sid="273775951842086">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Chery" sid="500911356523707">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607774340576963" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.526316" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gem" sid="168785391447694">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757902391695506" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
