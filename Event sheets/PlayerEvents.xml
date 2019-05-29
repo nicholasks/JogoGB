@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlayerEvents</name>
     <events>
+        <variable constant="0" name="Score" sid="627539963597612" static="0" type="number">0</variable>
         <variable constant="0" name="Paused" sid="462740799389052" static="0" type="number">0</variable>
         <event-group description="" sid="654352328526839" title="Controls">
             <sub-events>
@@ -174,7 +175,11 @@
                             <param id="0" name="Object">S_Ladder</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="530689568156054" type="PlayerBox">
+                            <param id="0" name="Jump strength">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="138898703367328">
                             <conditions>
@@ -291,6 +296,9 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="513740123510570" type="PlayerBox">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="983365749627604" type="PlayerBox">
+                            <param id="0" name="Jump strength">400</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="259967108939740">
@@ -360,6 +368,9 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="678024393702064" type="PlayerBox" />
                         <action id="-9" name="Destroy" sid="335481730269017" type="Player" />
+                        <action id="-25" name="Go to layout (by name)" sid="854206844788684" type="System">
+                            <param id="0" name="Layout">&quot;GameOverScreen&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -403,9 +414,19 @@
                                     <param id="0" name="Instance variable">Life</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="2" name="Stop" sid="167315426589809" type="Player" />
+                                <action behavior="Platform" id="5" name="Set gravity" sid="947056595096460" type="PlayerBox">
+                                    <param id="0" name="Gravity">400</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="991923222750022" type="PlayerBox">
+                                    <param id="0" name="State">0</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="536162306610248" type="Player">
                                     <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="968654738093985" type="PlayerBox">
+                                    <param id="0" name="Collisions">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -489,6 +510,9 @@
         <event-block sid="244887785595357">
             <conditions>
                 <condition behavior="Platform" id="4" name="Is falling" sid="628192237288466" type="PlayerBox" />
+                <condition id="2" inverted="1" name="Is playing" sid="384772567026698" type="Player">
+                    <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="2" name="Stop" sid="692865237445407" type="Player" />
@@ -508,20 +532,18 @@
             <actions>
                 <action id="2" name="Stop" sid="544217640989180" type="Player" />
             </actions>
-            <sub-events>
-                <event-block sid="312761544408977">
-                    <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="214395243079490" type="PlayerBox" />
-                        <condition behavior="Platform" id="0" name="Is moving" sid="144224314731660" type="PlayerBox" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="261909557018802" type="Player">
-                            <param id="0" name="Animation">&quot;Running&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+        </event-block>
+        <event-block sid="312761544408977">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="214395243079490" type="PlayerBox" />
+                <condition behavior="Platform" id="0" name="Is moving" sid="144224314731660" type="PlayerBox" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="261909557018802" type="Player">
+                    <param id="0" name="Animation">&quot;Running&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

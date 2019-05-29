@@ -10,6 +10,7 @@
     <unique-id>2nyaj1zhy0q4h</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -220,7 +221,7 @@
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-5.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-6.png" />
                 </animation>
-                <animation framecount="2" loop="0" name="TakingDamage" pingpong="0" repeatcount="1" repeatto="0" sid="999324714830221" speed="5">
+                <animation framecount="2" loop="1" name="TakingDamage" pingpong="0" repeatcount="1" repeatto="0" sid="999324714830221" speed="5">
                     <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-1.png" />
                     <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-2.png" />
                 </animation>
@@ -608,11 +609,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite2" sid="334875380764051">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876389855182756" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\alu201522594\Desktop\JogoGB\CustomSprites\gameOverScreen.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ContinueButton" sid="328235505425974">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Fase1.xml</layout>
         <layout>Fase2.xml</layout>
+        <layout>GameOverScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>EventsFase1.xml</event-sheet>
@@ -620,6 +633,7 @@
         <event-sheet>PlayerEvents.xml</event-sheet>
         <event-sheet>EnemyEvents.xml</event-sheet>
         <event-sheet>GeneralEvents.xml</event-sheet>
+        <event-sheet>GameOverEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="23" />

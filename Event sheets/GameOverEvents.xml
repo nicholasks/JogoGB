@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOverEvents</name>
+    <events>
+        <event-block any="1" sid="614997883531512">
+            <conditions>
+                <condition id="0" name="On clicked" sid="264812806612273" type="ContinueButton" />
+                <condition id="0" name="On key pressed" sid="679523162954492" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="104038503763045" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="728155741910592" type="System">
+                    <param id="0" name="Layout">&quot;Fase1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="571190830382277" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
