@@ -96,7 +96,7 @@
         <event-block sid="427420255225911">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="260102323864958" type="System">
-                    <param id="0" name="Interval (seconds)">random(0.5,3)</param>
+                    <param id="0" name="Interval (seconds)">random(6,10)</param>
                 </condition>
             </conditions>
             <actions>

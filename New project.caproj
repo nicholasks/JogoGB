@@ -10,6 +10,7 @@
     <unique-id>2nyaj1zhy0q4h</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -18,7 +19,9 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -200,6 +203,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Life" sid="156060898637127" type="number" />
+                <instance-variable name="Movement" sid="875307316277299" type="string" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="4" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="302090722116259" speed="5">
@@ -208,28 +212,39 @@
                     <frame duration="1" hotspotX="0.521739" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\idle\player-idle-3.png" />
                     <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\idle\player-idle-4.png" />
                 </animation>
-                <animation framecount="6" loop="0" name="Running" pingpong="0" repeatcount="1" repeatto="0" sid="312139380854762" speed="5">
+                <animation framecount="6" loop="1" name="Running" pingpong="0" repeatcount="0" repeatto="0" sid="312139380854762" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-2.png" />
+                    <frame duration="1" hotspotX="0.545455" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-3.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-4.png" />
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-5.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\run\player-run-6.png" />
                 </animation>
                 <animation framecount="2" loop="0" name="TakingDamage" pingpong="0" repeatcount="1" repeatto="0" sid="999324714830221" speed="5">
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-1.png" />
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-2.png" />
+                    <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-1.png" />
+                    <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\player\hurt\player-hurt-2.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="Ladder" pingpong="0" repeatcount="1" repeatto="0" sid="465858456599875" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="PlayerBox" sid="210634724279296">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Movement" sid="815929614496744" type="string" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="145111270845374">
                     <behavior id="Platform" />
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="625658526731636">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="780285309944459">
+                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -348,140 +363,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpritesCenarioClimb" sid="524910884677881">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="127" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662571940640168" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="LifeHUD" sid="688238511434200">
             <plugin id="Sprite" />
             <animation-folder>
@@ -503,6 +384,59 @@
         </object-type>
         <object-type name="LifeText" sid="356938091885947">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Ladder" sid="770259261740548">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="858155269376237">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630412042718012" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="S_Ladder" sid="455992089787531">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355000804713911" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="S_Ladder_Top" sid="239580307290832">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="781461205043836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="S_Ladder_Bottom" sid="149927414978469">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452103818910756" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="290774272928077">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="794380657015161">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969291200768886" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="273775951842086">
+            <plugin id="Function" />
         </object-type>
     </object-folder>
     <families />
@@ -529,6 +463,7 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="246" />
     </global-instances>
     <sounds-folder />
     <music-folder />

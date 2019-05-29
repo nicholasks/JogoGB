@@ -2597,6 +2597,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Movement>Platform</Movement>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
@@ -2615,6 +2618,17 @@
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>200</max-speed>
+                                <acceleration>100000</acceleration>
+                                <deceleration>100000</deceleration>
+                                <directions>Up &amp; down</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2686,6 +2700,7 @@
                     </properties>
                     <instance-variables>
                         <Life>10</Life>
+                        <Movement>Platform</Movement>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

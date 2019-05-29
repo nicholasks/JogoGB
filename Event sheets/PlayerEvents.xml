@@ -3,8 +3,51 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlayerEvents</name>
     <events>
+        <variable constant="0" name="Paused" sid="462740799389052" static="0" type="number">0</variable>
         <event-group description="" sid="654352328526839" title="Controls">
             <sub-events>
+                <event-block sid="763802142868897">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="563769615636872" type="Keyboard">
+                            <param id="0" name="Key">80</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="389825259681460">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="718694992188364" type="System">
+                                    <param id="0" name="Variable">Paused</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="698959948634017" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="308288734962431" type="System">
+                                    <param id="0" name="Variable">Paused</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="650465493274305">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="851628457828315" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="444750084706182" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="331345814212964" type="System">
+                                    <param id="0" name="Variable">Paused</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="426897805734641">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="934188208226159" type="System" />
@@ -16,10 +59,51 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="763826344713549">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="928568840935476" type="PlayerBox">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Platform&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="580645300665083">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="625454696346074" type="System">
+                                    <param id="0" name="Variable">Paused</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="246138833036751" type="PlayerBox">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="257120477783246">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="932326142009325" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="360635062201196" type="PlayerBox">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="132193610973164">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="512901453545054" type="Keyboard">
                             <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="397617620073529" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -32,6 +116,11 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="169909215236687" type="Keyboard">
                             <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="663255346492817" type="System">
+                            <param id="0" name="Variable">Paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -57,8 +146,198 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="584169131103419">
+                    <conditions>
+                        <condition id="0" name="On function" sid="139528476506049" type="Function">
+                            <param id="0" name="Name">&quot;OnStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="0" name="Stop" sid="965411025696948" type="PlayerBox" />
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="249569750659493" type="PlayerBox">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="277211660988180" type="PlayerBox">
+                            <param id="0" name="Vector Y">0</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="844135353938220" type="PlayerBox">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="121469909811604" type="PlayerBox">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="227783045919397">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="796787979997855" type="PlayerBox">
+                            <param id="0" name="Object">S_Ladder</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="138898703367328">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="198215722116748" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="126552035634349" type="PlayerBox">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="268584669346710">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="506276818782068" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Call expression" sid="605251490023509" type="Function">
+                                            <param id="0" name="Expression">&quot;OnStop&quot;</param>
+                                        </action>
+                                        <action behavior="Platform" id="6" name="Set max fall speed" sid="653760773083272" type="PlayerBox">
+                                            <param id="0" name="Max fall speed">0</param>
+                                        </action>
+                                        <action behavior="8Direction" id="8" name="Set enabled" sid="485516137545171" type="PlayerBox">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="159933053945793" type="PlayerBox">
+                                            <param id="0" name="Instance variable">Movement</param>
+                                            <param id="1" name="Value">&quot;Climbing&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="133174197430093">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="754148895893340" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="257724228163646" type="PlayerBox">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="228995289612711">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="436519332665532" type="PlayerBox" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="226237366562729" type="Player">
+                                    <param id="0" name="Animation">&quot;Ladder&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="985185386851234">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="475200573874167" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="922331589233080" type="System">
+                                    <param id="0" name="First value">PlayerBox.8Direction.VectorY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="526220794299614">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="395223703473578" type="PlayerBox">
+                                            <param id="0" name="Object">S_Ladder_Bottom</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="458804076286764" type="Function">
+                                            <param id="0" name="Name">&quot;OnStop&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="540775339133591" type="PlayerBox">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="234633955153599" type="Player">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="774067771556018" type="PlayerBox">
+                                            <param id="0" name="Instance variable">Movement</param>
+                                            <param id="1" name="Value">&quot;Climbing&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="388760691315084">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="473837685172038" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="6" name="Set max fall speed" sid="338895591740946" type="PlayerBox">
+                            <param id="0" name="Max fall speed">1000</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="136736099092120" type="PlayerBox">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Platform&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="513740123510570" type="PlayerBox">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="259967108939740">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="901508555308870" type="Player">
+                                    <param id="0" name="Animation">&quot;Ladder&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="309556318760828" type="Player">
+                                    <param id="0" name="Animation">&quot;Running&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="323547796451145">
+            <conditions>
+                <condition id="2" name="Key is down" sid="304199138349536" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="552456938719363" type="PlayerBox">
+                    <param id="0" name="Object">S_Ladder_Top</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="308253234597254" type="Function">
+                    <param id="0" name="Name">&quot;OnStop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="224430813509224" type="PlayerBox">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="198588432634813" type="PlayerBox">
+                    <param id="0" name="Vector Y">PlayerBox.Y + 3</param>
+                </action>
+                <action id="-10" name="Set value" sid="237828241885161" type="PlayerBox">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Value">&quot;Climbing&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="458141128651581" title="Destroy">
             <sub-events>
                 <event-block sid="764731656499797">
@@ -170,6 +449,11 @@
         <event-block sid="942745128367551">
             <conditions>
                 <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="125618275723178" type="PlayerBox" />
+                <condition id="-7" name="Compare instance variable" sid="818516720220699" type="PlayerBox">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Platform&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="467053871858520" type="Player">
