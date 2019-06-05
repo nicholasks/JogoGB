@@ -460,6 +460,9 @@
         </object-type>
         <object-type name="Gem" sid="168785391447694">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Quantidade de pontoa a serem add ao Score." name="qtScore" sid="710432293555528" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757902391695506" speed="5">
                     <frame duration="1" hotspotX="0.533333" hotspotY="1" />

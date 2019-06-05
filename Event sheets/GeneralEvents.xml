@@ -15,5 +15,15 @@
                 <action id="-9" name="Destroy" sid="680741685928520" type="Explosion" />
             </actions>
         </event-block>
+        <event-block sid="237704664703488">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="759734306022014" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="984760399316169" type="LifeText">
+                    <param id="0" name="Text">&quot;x &quot;&amp;Player.Life</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
