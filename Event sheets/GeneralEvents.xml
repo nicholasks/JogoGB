@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GeneralEvents</name>
     <events>
+        <include>PickupEvents</include>
         <include>PlayerEvents</include>
         <include>EnemyEvents</include>
         <event-block sid="225693580965712">
@@ -21,7 +22,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="984760399316169" type="LifeText">
-                    <param id="0" name="Text">&quot;x &quot;&amp;Player.Life</param>
+                    <param id="0" name="Text">&quot;x &quot;&amp;Life</param>
                 </action>
             </actions>
         </event-block>

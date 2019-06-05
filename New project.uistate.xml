@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Fase1</layout>
-        <layout active="1" order="1">Fase2</layout>
+        <layout active="1" order="0">Fase1</layout>
+        <layout order="1">Fase2</layout>
         <layout order="6">GameOverScreen</layout>
         <event-sheet order="2">PlayerEvents</event-sheet>
         <event-sheet order="3">EnemyEvents</event-sheet>
@@ -19,6 +19,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="5">EventsFase1</event-sheet>
         <event-sheet order="7">GameOverEvents</event-sheet>
         <event-sheet order="8">EventsFase2</event-sheet>
+        <event-sheet order="9">PickupEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,16 +30,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Enemies/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Eagle/" />
+        <folder expanded="1" path="animation-folder/Frog/" />
+        <folder expanded="1" path="animation-folder/Opossum/" />
         <folder expanded="1" path="animation-folder/SpritesCenario/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/PlayerBox/" />
-        <folder expanded="1" path="animation-folder/Frog/" />
         <folder expanded="1" path="animation-folder/Explosion/" />
         <folder expanded="1" path="animation-folder/House/" />
         <folder expanded="1" path="animation-folder/Tree/" />
@@ -53,7 +57,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Chery/" />
         <folder expanded="1" path="animation-folder/Gem/" />
         <folder expanded="1" path="animation-folder/SpritesCenarioJumpThru/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/GameOverImage/" />
         <folder expanded="1" path="animation-folder/SpawnPoint/" />
+        <folder expanded="1" path="animation-folder/ColliderEnemy/" />
     </folders-expanded>
 </c2uistate>

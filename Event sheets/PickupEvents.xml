@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PickupEvents</name>
+    <events>
+        <event-block any="1" sid="455512548459339">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="441433980111382" type="PlayerBox">
+                    <param id="0" name="Object">Gem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="331796294543693" type="Gem" />
+                <action id="-10" name="Add to" sid="935042937325399" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-10" name="Add to" sid="683232646196084" type="System">
+                    <param id="0" name="Variable">ScoreLife</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="918530893720338">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="111576465607611" type="PlayerBox">
+                    <param id="0" name="Object">Chery</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="782748441350925" type="Chery" />
+                <action id="-10" name="Add to" sid="431277351819399" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-10" name="Add to" sid="918177573386687" type="System">
+                    <param id="0" name="Variable">ScoreLife</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

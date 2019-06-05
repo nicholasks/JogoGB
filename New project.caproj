@@ -53,6 +53,102 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="Enemies">
+            <object-type name="Eagle" sid="779155383332710">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="744025743553292" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="318734329063904">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165978611657403" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\eagle\eagle-attack-1.png">
+                            <image-point name="Explosion" x="0.5" y="0.512195" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.513514" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\eagle\eagle-attack-2.png">
+                            <image-point name="Explosion" x="0.513514" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\eagle\eagle-attack-3.png">
+                            <image-point name="Explosion" x="0.5" y="0.518519" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\eagle\eagle-attack-4.png">
+                            <image-point name="Explosion" x="0.515152" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Frog" sid="597637095281716">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="jump" sid="165376418066133" type="boolean" />
+                    <instance-variable name="moving" sid="167797465557181" type="number" />
+                    <instance-variable name="timing" sid="108132743706616" type="number" />
+                    <instance-variable name="currentTiming" sid="300129272583258" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="645314963236915">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="681004769398563" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-1.png">
+                            <image-point name="Explosion" x="0.5" y="0.52381" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-2.png">
+                            <image-point name="Explosion" x="0.516129" y="0.545455" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-3.png">
+                            <image-point name="Explosion" x="0.515152" y="0.521739" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-4.png">
+                            <image-point name="Explosion" x="0.516129" y="0.545455" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="476695306090110" speed="5">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Opossum" sid="596002119060233">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="257425973950154" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="710257511200555">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849234964181926" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-1.png">
+                            <image-point name="Explosion" x="0.5" y="0.518519" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-2.png">
+                            <image-point name="Explosion" x="0.516129" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-3.png">
+                            <image-point name="Explosion" x="0.5" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.513514" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-4.png">
+                            <image-point name="Explosion" x="0.513514" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.513514" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-5.png">
+                            <image-point name="Explosion" x="0.513514" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\alu201821025\Desktop\Sunny-land-files\PNG\sprites\opossum\opossum-6.png">
+                            <image-point name="Explosion" x="0.515152" y="0.52" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="BackBackground" sid="688084091722878">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\environment\layers\back.png" />
@@ -270,32 +366,6 @@
         <object-type name="Gamepad" sid="716436623571189">
             <plugin id="gamepad" />
         </object-type>
-        <object-type name="Frog" sid="597637095281716">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="jump" sid="165376418066133" type="boolean" />
-                <instance-variable name="moving" sid="167797465557181" type="number" />
-                <instance-variable name="timing" sid="108132743706616" type="number" />
-                <instance-variable name="currentTiming" sid="300129272583258" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Platform" sid="645314963236915">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="681004769398563" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-1.png" />
-                    <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-2.png" />
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-3.png" />
-                    <frame duration="1" hotspotX="0.516129" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\idle\frog-idle-4.png" />
-                </animation>
-                <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="476695306090110" speed="5">
-                    <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-2.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Explosion" sid="230455802700681">
             <plugin id="Sprite" />
             <animation-folder>
@@ -449,7 +519,7 @@
         <object-type name="Chery" sid="500911356523707">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607774340576963" speed="5">
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607774340576963" speed="5">
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" />
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" />
                     <frame duration="1" hotspotX="0.529412" hotspotY="1" />
@@ -464,7 +534,7 @@
                 <instance-variable comment="Quantidade de pontoa a serem add ao Score." name="qtScore" sid="710432293555528" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757902391695506" speed="5">
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757902391695506" speed="5">
                     <frame duration="1" hotspotX="0.533333" hotspotY="1" />
                     <frame duration="1" hotspotX="0.533333" hotspotY="1" />
                     <frame duration="1" hotspotX="0.533333" hotspotY="1" />
@@ -612,7 +682,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="334875380764051">
+        <object-type name="GameOverImage" sid="334875380764051">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="876389855182756" speed="5">
@@ -634,6 +704,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ColliderEnemy" sid="224827268318956">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205130061106114" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -648,6 +726,7 @@
         <event-sheet>EnemyEvents.xml</event-sheet>
         <event-sheet>GeneralEvents.xml</event-sheet>
         <event-sheet>GameOverEvents.xml</event-sheet>
+        <event-sheet>PickupEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="23" />

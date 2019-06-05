@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PlayerEvents</name>
     <events>
+        <variable constant="0" name="ScoreLife" sid="615116430684859" static="0" type="number">0</variable>
+        <variable constant="0" name="Life" sid="686797377092014" static="0" type="number">3</variable>
         <variable constant="0" name="Score" sid="627539963597612" static="0" type="number">0</variable>
         <variable constant="0" name="LastCheckPoint" sid="238832714997424" static="0" type="number">1</variable>
         <variable constant="0" name="Paused" sid="462740799389052" static="0" type="number">0</variable>
@@ -351,15 +353,13 @@
             <sub-events>
                 <event-block sid="764731656499797">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="174847592411262" type="Player">
-                            <param id="0" name="Instance variable">Life</param>
+                        <condition id="-14" name="Compare variable" sid="419593632408921" type="System">
+                            <param id="0" name="Variable">Life</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="994825447688442" type="Player" />
-                        <action id="-9" name="Destroy" sid="570360279470271" type="PlayerBox" />
                         <action id="-25" name="Go to layout (by name)" sid="854206844788684" type="System">
                             <param id="0" name="Layout">&quot;GameOverScreen&quot;</param>
                         </action>
@@ -388,8 +388,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-12" name="Subtract from" sid="943447879532160" type="Player">
-                                            <param id="0" name="Instance variable">Life</param>
+                                        <action id="-11" name="Subtract from" sid="153918258844448" type="System">
+                                            <param id="0" name="Variable">Life</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="2" name="Stop" sid="353103599304121" type="Player" />
@@ -402,6 +402,7 @@
                                         <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
                                             <param id="0" name="Collisions">1</param>
                                         </action>
+                                        <action id="-26" name="Restart layout" sid="981159492864672" type="System" />
                                         <action id="-4" name="Set position to another object" sid="832478329528809" type="Player">
                                             <param id="0" name="Object">SpawnPoint</param>
                                             <param id="1" name="Image point (optional)">0</param>
@@ -427,69 +428,164 @@
         </event-group>
         <event-group description="" sid="251881377064216" title="Colisions">
             <sub-events>
-                <event-block sid="629387568468856">
+                <event-block sid="396315966782414">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="774355134250309" type="PlayerBox">
-                            <param id="0" name="Object">Frog</param>
+                        <condition id="0" name="On function" sid="401766152828795" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="598152152283550">
-                            <conditions>
-                                <condition behavior="Platform" id="4" name="Is falling" sid="217007537908576" type="PlayerBox" />
-                                <condition id="-2" name="Compare Y" sid="701377400303099" type="PlayerBox">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Frog.Y</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="527874809094256" type="PlayerBox">
-                                    <param id="0" name="Vector Y">Self.Y * -0.85</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="700503812001043" type="Frog">
-                                    <param id="0" name="Object">Explosion</param>
-                                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="789416144918764" type="Frog" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="817864996234544">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="220402453175284" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="147403991265536" type="Player">
-                                    <param id="0" name="Instance variable">Movement</param>
-                                    <param id="1" name="Value">&quot;Dying&quot;</param>
-                                </action>
-                                <action id="2" name="Stop" sid="167315426589809" type="Player" />
-                                <action behavior="Platform" id="1" name="Set max speed" sid="619383970466504" type="PlayerBox">
-                                    <param id="0" name="Max Speed">0</param>
-                                </action>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="947056595096460" type="PlayerBox">
-                                    <param id="0" name="Gravity">400</param>
-                                </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="991923222750022" type="PlayerBox">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="692879732068202" type="PlayerBox">
-                                    <param id="0" name="Vector Y">Self.Y * -0.35</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="536162306610248" type="Player">
-                                    <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="11" name="Set collisions enabled" sid="968654738093985" type="PlayerBox">
-                                    <param id="0" name="Collisions">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-10" name="Set value" sid="726211107372104" type="Player">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Dying&quot;</param>
+                        </action>
+                        <action id="2" name="Stop" sid="953649636738436" type="Player" />
+                        <action behavior="Platform" id="1" name="Set max speed" sid="738152452667541" type="PlayerBox">
+                            <param id="0" name="Max Speed">0</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="916077362354030" type="PlayerBox">
+                            <param id="0" name="Gravity">400</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="713246402950395" type="PlayerBox">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="909107512312886" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.35</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="663928950725500" type="Player">
+                            <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="629387568468856">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="774355134250309" type="PlayerBox">
+                    <param id="0" name="Object">Frog</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="598152152283550">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="217007537908576" type="PlayerBox" />
+                        <condition id="-2" name="Compare Y" sid="701377400303099" type="PlayerBox">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Frog.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="527874809094256" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="700503812001043" type="Frog">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">&quot;Explosion&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="789416144918764" type="Frog" />
+                    </actions>
+                </event-block>
+                <event-block sid="817864996234544">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="220402453175284" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="382101302056021" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="382976590660042">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="445386026541586" type="PlayerBox">
+                    <param id="0" name="Object">Opossum</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="215895429430061">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="596041144409484" type="PlayerBox" />
+                        <condition id="-2" name="Compare Y" sid="554391801148537" type="PlayerBox">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Opossum.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="661850999834709" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="299875445767816" type="Opossum">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">&quot;Explosion&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="356843102024555" type="Opossum" />
+                    </actions>
+                </event-block>
+                <event-block sid="256835338204683">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="556545514081936" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="461955166816503" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="805002778341335">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="365229957291876" type="PlayerBox">
+                    <param id="0" name="Object">Eagle</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="357139919412806">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="917836173547356" type="PlayerBox" />
+                        <condition id="-2" name="Compare Y" sid="261578677480308" type="PlayerBox">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Eagle.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="128244919536892" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="871512214659115" type="Eagle">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">&quot;Explosion&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="476573277666881" type="Eagle" />
+                    </actions>
+                </event-block>
+                <event-block sid="713791448605334">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="411451913887391" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="995639521856484" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-group description="" sid="738884422002453" title="Animations">
             <sub-events>
                 <event-block sid="992198927568782">
@@ -608,6 +704,26 @@
                 <action id="4" name="Set animation" sid="261909557018802" type="Player">
                     <param id="0" name="Animation">&quot;Running&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="644041480455771" title="Bonus" />
+        <event-block sid="960387523292982">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="609057371751747" type="System">
+                    <param id="0" name="Variable">ScoreLife</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="741194460853780" type="System">
+                    <param id="0" name="Variable">Life</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="856475398151148" type="System">
+                    <param id="0" name="Variable">ScoreLife</param>
+                    <param id="1" name="Value">100</param>
                 </action>
             </actions>
         </event-block>
