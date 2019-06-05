@@ -4,6 +4,7 @@
     <name>PlayerEvents</name>
     <events>
         <variable constant="0" name="Score" sid="627539963597612" static="0" type="number">0</variable>
+        <variable constant="0" name="LastCheckPoint" sid="238832714997424" static="0" type="number">1</variable>
         <variable constant="0" name="Paused" sid="462740799389052" static="0" type="number">0</variable>
         <event-group description="" sid="654352328526839" title="Controls">
             <sub-events>
@@ -358,20 +359,69 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="994825447688442" type="Player" />
-                        <action id="-26" name="Restart layout" sid="169819601077714" type="System" />
+                        <action id="-9" name="Destroy" sid="570360279470271" type="PlayerBox" />
+                        <action id="-25" name="Go to layout (by name)" sid="854206844788684" type="System">
+                            <param id="0" name="Layout">&quot;GameOverScreen&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="205309555567928">
                     <conditions>
                         <condition id="-4" name="Is outside layout" sid="247345402196987" type="Player" />
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="678024393702064" type="PlayerBox" />
-                        <action id="-9" name="Destroy" sid="335481730269017" type="Player" />
-                        <action id="-25" name="Go to layout (by name)" sid="854206844788684" type="System">
-                            <param id="0" name="Layout">&quot;GameOverScreen&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="551307425868856">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="220668341425220" type="System">
+                                    <param id="0" name="Object">SpawnPoint</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="882221099540599">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="159315190566990" type="SpawnPoint">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">LastCheckPoint</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="943447879532160" type="Player">
+                                            <param id="0" name="Instance variable">Life</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="353103599304121" type="Player" />
+                                        <action behavior="Platform" id="5" name="Set gravity" sid="729586674403961" type="PlayerBox">
+                                            <param id="0" name="Gravity">1500</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="168164452723231" type="PlayerBox">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
+                                            <param id="0" name="Collisions">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="832478329528809" type="Player">
+                                            <param id="0" name="Object">SpawnPoint</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="716569901110238" type="PlayerBox">
+                                            <param id="0" name="Object">SpawnPoint</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="107814046474084" type="Player">
+                                            <param id="0" name="Instance variable">Movement</param>
+                                            <param id="1" name="Value">&quot;Platform&quot;</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="733620968475644" type="PlayerBox">
+                                            <param id="0" name="Max Speed">300</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -410,16 +460,22 @@
                                 <condition id="-22" name="Else" sid="220402453175284" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="943447879532160" type="Player">
-                                    <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="147403991265536" type="Player">
+                                    <param id="0" name="Instance variable">Movement</param>
+                                    <param id="1" name="Value">&quot;Dying&quot;</param>
                                 </action>
                                 <action id="2" name="Stop" sid="167315426589809" type="Player" />
+                                <action behavior="Platform" id="1" name="Set max speed" sid="619383970466504" type="PlayerBox">
+                                    <param id="0" name="Max Speed">0</param>
+                                </action>
                                 <action behavior="Platform" id="5" name="Set gravity" sid="947056595096460" type="PlayerBox">
                                     <param id="0" name="Gravity">400</param>
                                 </action>
                                 <action behavior="Platform" id="11" name="Set enabled" sid="991923222750022" type="PlayerBox">
                                     <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="692879732068202" type="PlayerBox">
+                                    <param id="0" name="Vector Y">Self.Y * -0.35</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="536162306610248" type="Player">
                                     <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
@@ -486,6 +542,11 @@
         <event-block sid="535222787864843">
             <conditions>
                 <condition behavior="Platform" id="3" name="Is jumping" sid="374276770528708" type="PlayerBox" />
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="606206214568058" type="Player">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Dying&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="955928841941465" type="Player">
@@ -512,6 +573,11 @@
                 <condition behavior="Platform" id="4" name="Is falling" sid="628192237288466" type="PlayerBox" />
                 <condition id="2" inverted="1" name="Is playing" sid="384772567026698" type="Player">
                     <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                </condition>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="639286869232155" type="Player">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Dying&quot;</param>
                 </condition>
             </conditions>
             <actions>

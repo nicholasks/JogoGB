@@ -2699,7 +2699,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Life>10</Life>
+                        <Life>3</Life>
                         <Movement>Platform</Movement>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
