@@ -3,140 +3,144 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EnemyEvents</name>
     <events>
-        <event-block sid="297468552756840">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="268131696078039" type="Frog">
-                    <param id="0" name="Instance variable">jump</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="566220021337357" type="Frog">
-                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Platform" id="7" name="Simulate control" sid="608425539069265" type="Frog">
-                    <param id="0" name="Control">2</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="854517660185350" type="Frog">
-                    <param id="0" name="Instance variable">jump</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="168386371693788">
-            <conditions>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="281786800713052" type="Frog" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="125843345440029" type="Frog">
-                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="175245151181395">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="749007002417310" type="System">
-                    <param id="0" name="Interval (seconds)">0.5</param>
-                </condition>
-                <condition id="-3" name="Is on-screen" sid="524046007494924" type="Player" />
-                <condition id="-7" name="Compare instance variable" sid="378439618418277" type="Frog">
-                    <param id="0" name="Instance variable">currentTiming</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">Frog.timing</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="986457452343543" type="Frog">
-                    <param id="0" name="Instance variable">currentTiming</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="450011570720996">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="552223126191030" type="Frog" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="605288205942070" title="FROG">
             <sub-events>
-                <event-block sid="614738848505279">
+                <event-block sid="297468552756840">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="540565040819930" type="Frog">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">PlayerBox.X</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="268131696078039" type="Frog">
+                            <param id="0" name="Instance variable">jump</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="290863139768049" type="Frog">
-                            <param id="0" name="Vector X">Self.X * -0.45</param>
+                        <action id="4" name="Set animation" sid="566220021337357" type="Frog">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="962835979445700" type="Frog">
-                            <param id="0" name="State">1</param>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="608425539069265" type="Frog">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="854517660185350" type="Frog">
+                            <param id="0" name="Instance variable">jump</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="357577347584476">
+                <event-block any="1" sid="168386371693788">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="150506751936580" type="Frog">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">PlayerBox.X</param>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="281786800713052" type="Frog" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="125843345440029" type="Frog">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175245151181395">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="749007002417310" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="524046007494924" type="Player" />
+                        <condition id="-7" name="Compare instance variable" sid="378439618418277" type="Frog">
+                            <param id="0" name="Instance variable">currentTiming</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Frog.timing</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="554861828385378" type="Frog">
-                            <param id="0" name="Vector X">Self.X * 0.45</param>
+                        <action id="-11" name="Add to" sid="986457452343543" type="Frog">
+                            <param id="0" name="Instance variable">currentTiming</param>
+                            <param id="1" name="Value">0.5</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="635922674497844" type="Frog">
-                            <param id="0" name="State">0</param>
+                    </actions>
+                </event-block>
+                <event-block sid="450011570720996">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="552223126191030" type="Frog" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="614738848505279">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="540565040819930" type="Frog">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">PlayerBox.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="290863139768049" type="Frog">
+                                    <param id="0" name="Vector X">Self.X * -0.45</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="962835979445700" type="Frog">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357577347584476">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="150506751936580" type="Frog">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">PlayerBox.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="554861828385378" type="Frog">
+                                    <param id="0" name="Vector X">Self.X * 0.45</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="635922674497844" type="Frog">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="427420255225911">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="260102323864958" type="System">
+                            <param id="0" name="Interval (seconds)">random(6,10)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="797839000464629" type="System">
+                            <param id="0" name="Object to create">Frog</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="X">784</param>
+                            <param id="3" name="Y">320</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="998864779270844">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="207253825643047" type="Frog" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="184783040278134" type="Frog">
+                            <param id="0" name="Instance variable">timing</param>
+                            <param id="1" name="Value">random(1.0,3.3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="962622016245909">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="634854873775555" type="Frog">
+                            <param id="0" name="Instance variable">currentTiming</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">Frog.timing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="208710479437678" type="Frog">
+                            <param id="0" name="Instance variable">jump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="440611152885447" type="Frog">
+                            <param id="0" name="Instance variable">currentTiming</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="427420255225911">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="260102323864958" type="System">
-                    <param id="0" name="Interval (seconds)">random(6,10)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="797839000464629" type="System">
-                    <param id="0" name="Object to create">Frog</param>
-                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                    <param id="2" name="X">784</param>
-                    <param id="3" name="Y">320</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="998864779270844">
-            <conditions>
-                <condition id="-18" name="On created" sid="207253825643047" type="Frog" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="184783040278134" type="Frog">
-                    <param id="0" name="Instance variable">timing</param>
-                    <param id="1" name="Value">random(1.0,3.3)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="962622016245909">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="634854873775555" type="Frog">
-                    <param id="0" name="Instance variable">currentTiming</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">Frog.timing</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="208710479437678" type="Frog">
-                    <param id="0" name="Instance variable">jump</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="440611152885447" type="Frog">
-                    <param id="0" name="Instance variable">currentTiming</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
