@@ -440,6 +440,13 @@
                             <param id="1" name="Value">&quot;Dying&quot;</param>
                         </action>
                         <action id="2" name="Stop" sid="953649636738436" type="Player" />
+                        <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="663928950725500" type="Player">
+                            <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action behavior="Platform" id="1" name="Set max speed" sid="738152452667541" type="PlayerBox">
                             <param id="0" name="Max Speed">0</param>
                         </action>
@@ -451,13 +458,6 @@
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="909107512312886" type="PlayerBox">
                             <param id="0" name="Vector Y">Self.Y * -0.35</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="663928950725500" type="Player">
-                            <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
-                            <param id="0" name="Collisions">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -612,12 +612,24 @@
                     <param id="0" name="Key">37</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="634968546728139" type="Player">
-                    <param id="0" name="Animation">&quot;Running&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="170992136068748">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="583946865702431" type="Player">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="634968546728139" type="Player">
+                            <param id="0" name="Animation">&quot;Running&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="942745128367551">
             <conditions>

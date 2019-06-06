@@ -60,5 +60,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/GameOverImage/" />
         <folder expanded="1" path="animation-folder/SpawnPoint/" />
         <folder expanded="1" path="animation-folder/ColliderEnemy/" />
+        <folder expanded="1" path="animation-folder/Crate/" />
+        <folder expanded="1" path="animation-folder/Bush/" />
+        <folder expanded="1" path="animation-folder/BackgroundSprites/" />
+        <folder expanded="1" path="animation-folder/SpritesCnrBackground/" />
     </folders-expanded>
 </c2uistate>
