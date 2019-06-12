@@ -396,12 +396,6 @@
                                         <action behavior="Platform" id="5" name="Set gravity" sid="729586674403961" type="PlayerBox">
                                             <param id="0" name="Gravity">1500</param>
                                         </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="168164452723231" type="PlayerBox">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
-                                            <param id="0" name="Collisions">1</param>
-                                        </action>
                                         <action id="-26" name="Restart layout" sid="981159492864672" type="System" />
                                         <action id="-4" name="Set position to another object" sid="832478329528809" type="Player">
                                             <param id="0" name="Object">SpawnPoint</param>
@@ -417,6 +411,12 @@
                                         </action>
                                         <action behavior="Platform" id="1" name="Set max speed" sid="733620968475644" type="PlayerBox">
                                             <param id="0" name="Max Speed">300</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="168164452723231" type="PlayerBox">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
+                                            <param id="0" name="Collisions">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -435,14 +435,21 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="7" name="Play (by name)" sid="821659246099081" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;death-sound&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">2</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-10" name="Set value" sid="726211107372104" type="Player">
                             <param id="0" name="Instance variable">Movement</param>
                             <param id="1" name="Value">&quot;Dying&quot;</param>
                         </action>
                         <action id="2" name="Stop" sid="953649636738436" type="Player" />
-                        <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
                         <action id="4" name="Set animation" sid="663928950725500" type="Player">
                             <param id="0" name="Animation">&quot;TakingDamage&quot;</param>
                             <param id="1" name="From">1</param>
@@ -480,6 +487,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="7" name="Play (by name)" sid="509018976829321" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="527874809094256" type="PlayerBox">
                             <param id="0" name="Vector Y">Self.Y * -0.85</param>
                         </action>
@@ -521,6 +535,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="7" name="Play (by name)" sid="622249248276448" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="661850999834709" type="PlayerBox">
                             <param id="0" name="Vector Y">Self.Y * -0.85</param>
                         </action>
@@ -562,6 +583,13 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="7" name="Play (by name)" sid="741564146531134" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="128244919536892" type="PlayerBox">
                             <param id="0" name="Vector Y">Self.Y * -0.85</param>
                         </action>
@@ -716,6 +744,20 @@
                 <action id="4" name="Set animation" sid="261909557018802" type="Player">
                     <param id="0" name="Animation">&quot;Running&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="806178279550030">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="204214895045147" type="PlayerBox" />
+            </conditions>
+            <actions>
+                <action id="7" name="Play (by name)" sid="773657586627707" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;jump01&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">-2</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
