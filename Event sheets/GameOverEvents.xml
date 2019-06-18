@@ -27,5 +27,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="320192794257351">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="541580875991009" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="139965706300312" type="System">
+                    <param id="0" name="Variable">CurrentLevel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

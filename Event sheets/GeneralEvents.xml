@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GeneralEvents</name>
     <events>
+        <variable constant="0" name="CurrentLevel" sid="196103582621079" static="0" type="number">0</variable>
         <include>PickupEvents</include>
         <include>PlayerEvents</include>
         <include>EnemyEvents</include>

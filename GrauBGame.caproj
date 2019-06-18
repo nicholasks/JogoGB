@@ -149,6 +149,152 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Bee" sid="824699603826936">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="472235799458707" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="175475516240281">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289987775816191" speed="5">
+                        <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-1.png" />
+                        <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-3.png" />
+                        <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-5.png" />
+                        <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-7.png" />
+                        <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\bee\bee-8.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PiranhaPlant" sid="747087260530278">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739683859980858" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant\piranha-plant-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant\piranha-plant-2.png" />
+                        <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant\piranha-plant-3.png" />
+                        <frame duration="1" hotspotX="0.521739" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant\piranha-plant-4.png" />
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant\piranha-plant-5.png" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="120053987606069" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant-attack\piranha-plant-attack-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant-attack\piranha-plant-attack-2.png" />
+                        <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant-attack\piranha-plant-attack-3.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\piranha-plant-attack\piranha-plant-attack-4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Slug" sid="517312650811934">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="844624715088625" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="886100332984973">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132248460306809" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\slug\slug-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\slug\slug-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\slug\slug-3.png" />
+                        <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\sprites\enemies\slug\slug-4.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Ant" sid="941826345379425">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="155199294974910" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="280475852035147">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="16" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507034461246772" speed="5">
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-1.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-4.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-5.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-6.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-7.png" />
+                        <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\ant\ant-8.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.515152" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Gator" sid="449037885548965">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="627792803489148" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="406511815677546">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271403916398441" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\gator\gator-1.png" />
+                        <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\gator\gator-2.png" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\gator\gator-3.png" />
+                        <frame duration="1" hotspotX="0.513514" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\gator\gator-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.512821" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.514286" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.513514" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Grasshopper" sid="950564236218545">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="344085939582091">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="800821388049075" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-idle\grasshopper-idle-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-idle\grasshopper-idle-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-idle\grasshopper-idle-3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-idle\grasshopper-idle-4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="261120420681370" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-jump\grasshopper-jump-1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-jump\grasshopper-jump-2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="814933587110235" speed="5">
+                        <frame duration="1" hotspotX="0.511628" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-fall\grasshopper-fall-1.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="1" original-source="C:\Users\user\Desktop\JogoGB-master\DATA\Sprites_Original_Files\Sunny-land-woods-files\SPRITES\enemies\grasshopper-fall\grasshopper-fall-2.png" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.511628" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="BackBackground" sid="688084091722878">
             <plugin id="TiledBg" />
@@ -438,7 +584,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914613850339836" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -533,6 +679,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="Quantidade de pontoa a serem add ao Score." name="qtScore" sid="710432293555528" type="number" />
+                <instance-variable name="CheckPoint" sid="153616536589898" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757902391695506" speed="5">

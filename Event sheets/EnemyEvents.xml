@@ -100,6 +100,11 @@
                         <condition id="-6" name="Every X seconds" sid="260102323864958" type="System">
                             <param id="0" name="Interval (seconds)">random(6,10)</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="676865360094379" type="System">
+                            <param id="0" name="Variable">CurrentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="797839000464629" type="System">
@@ -249,6 +254,230 @@
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="212333823322556" type="Opossum">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Self.Direction = &quot;Right&quot; ? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="925152702416936" title="Ant" />
+        <event-block sid="619649425098911">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="907295704141288" type="Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="879243346121649">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="929011942243757" type="Ant">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="110040588896013" type="Ant">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="205269494966819" type="Ant">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659299978685252">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="270668142382469" type="Ant">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="842148215930159" type="Ant">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="367428915169510" type="Ant">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="966587029924394">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="167352315902759" type="Ant">
+                    <param id="0" name="Object">ColliderEnemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="964585810608096" type="Ant">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Self.Direction = &quot;Right&quot; ? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="142887989166954" title="Bee" />
+        <event-block sid="444508439890193">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="270102157663927" type="Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="734937577470032">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="630778087969057" type="Bee">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="717038475155315" type="Bee">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="578070686402017" type="Bee">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="308178797101997">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="996221074042434" type="Bee">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="407742516548013" type="Bee">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="983739758543533" type="Bee">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="226253514247005">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="859496456855026" type="Bee">
+                    <param id="0" name="Object">ColliderEnemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="748384843190900" type="Bee">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Self.Direction = &quot;Right&quot; ? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="995798299668709" title="Gator" />
+        <event-block sid="606531074547764">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="798354860929585" type="Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="784384437323174">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="438086325488159" type="Gator">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="836907510170080" type="Gator">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="509505328223427" type="Gator">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450922258357165">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="364757137338868" type="Gator">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="608303882096012" type="Gator">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="286917438393675" type="Gator">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="359757653558838">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="944404383892165" type="Gator">
+                    <param id="0" name="Object">ColliderEnemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="932785791890323" type="Gator">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Self.Direction = &quot;Right&quot; ? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="522698975444958" title="Slug" />
+        <event-block sid="636005251128215">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="279903282998167" type="Player" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="433812378859694">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="876560624891267" type="Slug">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="721500472731799" type="Slug">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="763922017054276" type="Slug">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500092397492967">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="897824181138739" type="Slug">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="321604408595734" type="Slug">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="690929309652679" type="Slug">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="479949500855704">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="168721465403693" type="Slug">
+                    <param id="0" name="Object">ColliderEnemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="439358840076963" type="Slug">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">Self.Direction = &quot;Right&quot; ? &quot;Left&quot; : &quot;Right&quot;</param>
                 </action>

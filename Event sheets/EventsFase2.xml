@@ -4,5 +4,16 @@
     <name>EventsFase2</name>
     <events>
         <include>GeneralEvents</include>
+        <event-block sid="970088601088091">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="752388818486764" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="716562653076294" type="System">
+                    <param id="0" name="Variable">CurrentLevel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

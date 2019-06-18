@@ -30,7 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/Enemies/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -40,6 +40,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Eagle/" />
         <folder expanded="1" path="animation-folder/Frog/" />
         <folder expanded="1" path="animation-folder/Opossum/" />
+        <folder expanded="1" path="animation-folder/Bee/" />
+        <folder expanded="1" path="animation-folder/PiranhaPlant/" />
+        <folder expanded="1" path="animation-folder/Slug/" />
+        <folder expanded="1" path="animation-folder/Ant/" />
+        <folder expanded="1" path="animation-folder/Gator/" />
+        <folder expanded="1" path="animation-folder/Grasshopper/" />
         <folder expanded="1" path="animation-folder/SpritesCenario/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/PlayerBox/" />

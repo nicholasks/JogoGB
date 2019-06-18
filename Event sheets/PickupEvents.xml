@@ -19,6 +19,10 @@
                     <param id="0" name="Variable">ScoreLife</param>
                     <param id="1" name="Value">100</param>
                 </action>
+                <action id="-9" name="Set value" sid="274852515529468" type="System">
+                    <param id="0" name="Variable">LastCheckPoint</param>
+                    <param id="1" name="Value">Gem.CheckPoint</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="918530893720338">
