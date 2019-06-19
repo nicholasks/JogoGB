@@ -10,20 +10,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Fase1</layout>
         <layout order="1">Fase2</layout>
-        <layout order="6">GameOverScreen</layout>
-        <layout order="2">Fase3</layout>
-        <layout order="3">Fase4</layout>
-        <event-sheet order="4">EnemyEvents</event-sheet>
-        <event-sheet order="5">GeneralEvents</event-sheet>
-        <event-sheet order="9">EventsFase1</event-sheet>
-        <event-sheet order="7">GameOverEvents</event-sheet>
-        <event-sheet order="10">EventsFase2</event-sheet>
-        <event-sheet order="8">PickupEvents</event-sheet>
-        <event-sheet order="12">EventsFase4</event-sheet>
-        <event-sheet order="11">EventsFase3</event-sheet>
-        <event-sheet order="13">PlayerEvents</event-sheet>
+        <layout order="12">Fase3</layout>
+        <layout order="2">Fase4</layout>
+        <layout order="5">GameOverScreen</layout>
+        <layout order="0">Fase1</layout>
+        <layout order="14">StartMenu</layout>
+        <event-sheet order="3">EnemyEvents</event-sheet>
+        <event-sheet order="4">GeneralEvents</event-sheet>
+        <event-sheet order="6">GameOverEvents</event-sheet>
+        <event-sheet order="7">PickupEvents</event-sheet>
+        <event-sheet order="8">EventsFase1</event-sheet>
+        <event-sheet order="9">EventsFase2</event-sheet>
+        <event-sheet order="10">EventsFase3</event-sheet>
+        <event-sheet order="11">EventsFase4</event-sheet>
+        <event-sheet active="1" order="13">PlayerEvents</event-sheet>
+        <event-sheet order="15">StartMenuEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,11 +39,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Enemies/" />
         <folder expanded="0" path="object-folder/Background/" />
         <folder expanded="0" path="object-folder/SpritesF34/" />
-        <folder expanded="1" path="object-folder/Touchpad/" />
+        <folder expanded="0" path="object-folder/Touchpad/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Eagle/" />

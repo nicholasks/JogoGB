@@ -28,6 +28,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="174559465226444">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="464680031743806" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="633674171784833" type="TextScore">
+                    <param id="0" name="Text">&quot; &quot;&amp;Score</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="218037861097837">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="153756011277706" type="System">

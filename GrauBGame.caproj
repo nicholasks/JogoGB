@@ -1401,9 +1401,19 @@
         <object-type name="Audio" sid="133975072982542">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="TextScore" sid="140291487092078">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="748806499419439">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartButton" sid="128849444756890">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>StartMenu.xml</layout>
         <layout>Fase1.xml</layout>
         <layout>Fase2.xml</layout>
         <layout>Fase3.xml</layout>
@@ -1420,6 +1430,7 @@
         <event-sheet>PickupEvents.xml</event-sheet>
         <event-sheet>EventsFase3.xml</event-sheet>
         <event-sheet>EventsFase4.xml</event-sheet>
+        <event-sheet>StartMenuEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="23" />
@@ -1459,6 +1470,7 @@
         <file name="vida-powerup.ogg" />
         <file name="enemy-pop.m4a" />
         <file name="enemy-pop.ogg" />
+        <file name="platformer_level03_loop.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

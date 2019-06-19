@@ -3605,8 +3605,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-8.5</x>
-                        <y>245</y>
+                        <x>-8</x>
+                        <y>496</y>
                         <z>0</z>
                         <width>16</width>
                         <height>496</height>
@@ -8508,11 +8508,38 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TextScore" uid="600">
+                    <properties>
+                        <text></text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-12,700,0</font>
+                        <color>102,0,51</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>10</x>
+                        <y>32</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
         <layer name="Touch" sid="353468874217686">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>

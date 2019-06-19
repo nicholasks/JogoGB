@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>StartMenu</name>
+    <sid>938736592697299</sid>
+    <event-sheet>StartMenuEvents</event-sheet>
+    <size>
+        <width>500</width>
+        <height>300</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0" sid="798564142858093">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Text" uid="1107">
+                    <properties>
+                        <text>Foxy</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Bernard MT Condensed,-64,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>190</x>
+                        <y>52</y>
+                        <z>0</z>
+                        <width>153</width>
+                        <height>92</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StartButton" uid="1108">
+                    <properties>
+                        <type>Button</type>
+                        <text>Start</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>211</x>
+                        <y>166</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Layer 1" sid="115495935035464">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>

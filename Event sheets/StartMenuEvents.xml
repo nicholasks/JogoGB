@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartMenuEvents</name>
+    <events>
+        <event-block any="1" sid="775310018826437">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="489034599542799" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="0" name="On clicked" sid="914980646124313" type="StartButton" />
+                <condition id="2" name="Key is down" sid="940843947155084" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="212166000635012" type="System">
+                    <param id="0" name="Layout">&quot;Fase1&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="458555446309200" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

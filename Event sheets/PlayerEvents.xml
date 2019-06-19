@@ -600,7 +600,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;death-sound&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">2</param>
+                            <param id="4" name="Volume">-20</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="726211107372104" type="Player">
@@ -649,7 +649,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-20</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="527874809094256" type="PlayerBox">
@@ -661,6 +661,10 @@
                             <param id="2" name="Image point">&quot;Explosion&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="789416144918764" type="Frog" />
+                        <action id="-10" name="Add to" sid="416582774422858" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="817864996234544">
@@ -697,7 +701,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-10</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="661850999834709" type="PlayerBox">
@@ -709,6 +713,10 @@
                             <param id="2" name="Image point">&quot;Explosion&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="356843102024555" type="Opossum" />
+                        <action id="-10" name="Add to" sid="844065857396694" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="256835338204683">
@@ -745,7 +753,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-20</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="128244919536892" type="PlayerBox">
@@ -757,6 +765,10 @@
                             <param id="2" name="Image point">&quot;Explosion&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="476573277666881" type="Eagle" />
+                        <action id="-10" name="Add to" sid="792687992579178" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="713791448605334">
@@ -793,7 +805,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-20</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="601402914905447" type="PlayerBox">
@@ -805,6 +817,10 @@
                             <param id="2" name="Image point">&quot;Explosion&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="204593503009859" type="Slug" />
+                        <action id="-10" name="Add to" sid="328120212839093" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="989207418249936">
@@ -841,7 +857,7 @@
                             <param id="0" name="Folder">0</param>
                             <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
                             <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
+                            <param id="4" name="Volume">-10</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="733279354254356" type="PlayerBox">
@@ -853,6 +869,10 @@
                             <param id="2" name="Image point">&quot;Explosion&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="148107845944801" type="Bee" />
+                        <action id="-10" name="Add to" sid="904203285336117" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="431617221625275">
@@ -1010,7 +1030,7 @@
                     <param id="0" name="Folder">0</param>
                     <param id="1" name="Audio file name">&quot;jump01&quot;</param>
                     <param id="3" name="Loop">0</param>
-                    <param id="4" name="Volume">-2</param>
+                    <param id="4" name="Volume">-20</param>
                     <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -1032,6 +1052,12 @@
                 <action id="-11" name="Subtract from" sid="856475398151148" type="System">
                     <param id="0" name="Variable">ScoreLife</param>
                     <param id="1" name="Value">100</param>
+                </action>
+                <action id="0" name="Play" sid="507579800891533" type="Audio">
+                    <param id="0" name="Audio file">vida-powerup</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

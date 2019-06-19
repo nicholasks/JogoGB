@@ -13,6 +13,14 @@
                     <param id="0" name="Variable">CurrentLevel</param>
                     <param id="1" name="Value">2</param>
                 </action>
+                <action id="33" name="Stop all" sid="306671354262282" type="Audio" />
+                <action id="7" name="Play (by name)" sid="585373011902789" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;platformer_level03_loop&quot;</param>
+                    <param id="3" name="Loop">1</param>
+                    <param id="4" name="Volume">-5</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -36,6 +36,7 @@
                     <param id="0" name="Variable">CurrentLevel</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="33" name="Stop all" sid="443943335770558" type="Audio" />
             </actions>
         </event-block>
     </events>
