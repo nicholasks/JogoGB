@@ -19,11 +19,24 @@
                     <param id="0" name="Variable">ScoreLife</param>
                     <param id="1" name="Value">100</param>
                 </action>
-                <action id="-9" name="Set value" sid="274852515529468" type="System">
-                    <param id="0" name="Variable">LastCheckPoint</param>
-                    <param id="1" name="Value">Gem.CheckPoint</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="961934216235439">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="617775480028677" type="System">
+                            <param id="0" name="Variable">LastCheckPoint</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Gem.CheckPoint</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="274852515529468" type="System">
+                            <param id="0" name="Variable">LastCheckPoint</param>
+                            <param id="1" name="Value">Gem.CheckPoint</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block any="1" sid="918530893720338">
             <conditions>

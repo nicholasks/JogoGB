@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GeneralEvents</name>
     <events>
+        <variable constant="0" name="LifeSubTimer" sid="945178754320211" static="0" type="number">0</variable>
         <variable constant="0" name="CurrentLevel" sid="196103582621079" static="0" type="number">0</variable>
         <include>PickupEvents</include>
         <include>PlayerEvents</include>
@@ -24,6 +25,34 @@
             <actions>
                 <action id="0" name="Set text" sid="984760399316169" type="LifeText">
                     <param id="0" name="Text">&quot;x &quot;&amp;Life</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="218037861097837">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="153756011277706" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="156689521686752" type="System">
+                    <param id="0" name="Variable">LifeSubTimer</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752588535494757">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="238418678567694" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="345392106553417" type="System">
+                    <param id="0" name="Variable">IsSpawning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="367554583083926" type="System">
+                    <param id="0" name="Variable">LastCheckPoint</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

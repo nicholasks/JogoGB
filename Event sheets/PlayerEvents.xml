@@ -6,6 +6,7 @@
         <variable constant="0" name="ScoreLife" sid="615116430684859" static="0" type="number">0</variable>
         <variable constant="0" name="Life" sid="686797377092014" static="0" type="number">3</variable>
         <variable constant="0" name="Score" sid="627539963597612" static="0" type="number">0</variable>
+        <variable constant="0" name="IsSpawning" sid="341021797163266" static="0" type="number">0</variable>
         <variable constant="0" name="LastCheckPoint" sid="238832714997424" static="0" type="number">1</variable>
         <variable constant="0" name="Paused" sid="462740799389052" static="0" type="number">0</variable>
         <event-group description="" sid="654352328526839" title="Controls">
@@ -388,15 +389,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Subtract from" sid="153918258844448" type="System">
-                                            <param id="0" name="Variable">Life</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
                                         <action id="2" name="Stop" sid="353103599304121" type="Player" />
                                         <action behavior="Platform" id="5" name="Set gravity" sid="729586674403961" type="PlayerBox">
                                             <param id="0" name="Gravity">1500</param>
                                         </action>
-                                        <action id="-26" name="Restart layout" sid="981159492864672" type="System" />
+                                        <action disabled="1" id="-26" name="Restart layout" sid="981159492864672" type="System" />
+                                        <action id="-10" name="Set value" sid="107814046474084" type="Player">
+                                            <param id="0" name="Instance variable">Movement</param>
+                                            <param id="1" name="Value">&quot;Platform&quot;</param>
+                                        </action>
                                         <action id="-4" name="Set position to another object" sid="832478329528809" type="Player">
                                             <param id="0" name="Object">SpawnPoint</param>
                                             <param id="1" name="Image point (optional)">0</param>
@@ -405,18 +406,22 @@
                                             <param id="0" name="Object">SpawnPoint</param>
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="107814046474084" type="Player">
-                                            <param id="0" name="Instance variable">Movement</param>
-                                            <param id="1" name="Value">&quot;Platform&quot;</param>
-                                        </action>
                                         <action behavior="Platform" id="1" name="Set max speed" sid="733620968475644" type="PlayerBox">
                                             <param id="0" name="Max Speed">300</param>
+                                        </action>
+                                        <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
+                                            <param id="0" name="Collisions">1</param>
                                         </action>
                                         <action behavior="Platform" id="11" name="Set enabled" sid="168164452723231" type="PlayerBox">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action id="11" name="Set collisions enabled" sid="251796980528223" type="PlayerBox">
-                                            <param id="0" name="Collisions">1</param>
+                                        <action id="-9" name="Set value" sid="528391207296815" type="System">
+                                            <param id="0" name="Variable">IsSpawning</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="153918258844448" type="System">
+                                            <param id="0" name="Variable">Life</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -433,10 +438,28 @@
                         <condition id="0" name="On function" sid="401766152828795" type="Function">
                             <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="949247105132954" type="System">
+                            <param id="0" name="Variable">IsSpawning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="920331748090779" type="System">
+                            <param id="0" name="Variable">LifeSubTimer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="11" name="Set collisions enabled" sid="700494128064044" type="PlayerBox">
                             <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="907979996375017" type="System">
+                            <param id="0" name="Variable">LifeSubTimer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="206839604266900" type="System">
+                            <param id="0" name="Variable">IsSpawning</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="7" name="Play (by name)" sid="821659246099081" type="Audio">
                             <param id="0" name="Folder">0</param>
