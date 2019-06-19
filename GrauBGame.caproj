@@ -603,6 +603,73 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Touchpad">
+            <object-type name="bigpad" sid="520065017558684">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984832509162960" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nicho\Projects\JogoGB\Animations\bigpad\Default\000.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0.00333333" />
+                                <point x="0.848333" y="0.151667" />
+                                <point x="0.991667" y="0.5" />
+                                <point x="0.846667" y="0.846667" />
+                                <point x="0.5" y="0.991667" />
+                                <point x="0.151667" y="0.848333" />
+                                <point x="0.00333333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="compass" sid="718526846683090">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326199124609486" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nicho\Projects\JogoGB\Animations\compass\Default\000.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pad" sid="651661697388776">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157413393875010" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nicho\Projects\JogoGB\Animations\pad\Default\000.png">
+                            <collision-poly>
+                                <point x="0.22" y="0.22" />
+                                <point x="0.5" y="0.1" />
+                                <point x="0.78" y="0.22" />
+                                <point x="0.9" y="0.5" />
+                                <point x="0.78" y="0.78" />
+                                <point x="0.5" y="0.9" />
+                                <point x="0.22" y="0.78" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pause" sid="507829189980952">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480803096675611" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nicho\Desktop\pause.png">
+                            <collision-poly>
+                                <point x="0.175781" y="0.175781" />
+                                <point x="0.5" y="0.0410156" />
+                                <point x="0.824219" y="0.175781" />
+                                <point x="0.958984" y="0.5" />
+                                <point x="0.824219" y="0.824219" />
+                                <point x="0.5" y="0.958984" />
+                                <point x="0.175781" y="0.824219" />
+                                <point x="0.0410156" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="SpritesCenario" sid="822913984661378">
             <plugin id="Sprite" />
             <behaviors>
