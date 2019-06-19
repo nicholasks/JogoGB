@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EventsFase3</name>
+    <events>
+        <include>GeneralEvents</include>
+        <event-block sid="220122164396725">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="476467486116181" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="531125227266787" type="System">
+                    <param id="0" name="Variable">CurrentLevel</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

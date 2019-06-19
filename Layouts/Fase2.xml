@@ -76,10 +76,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-112</x>
+                        <x>0</x>
                         <y>160</y>
                         <z>0</z>
-                        <width>3120</width>
+                        <width>3008</width>
                         <height>352</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2702,7 +2702,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>118</x>
+                        <x>119</x>
                         <y>384</y>
                         <z>0</z>
                         <width>16</width>
@@ -2746,7 +2746,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2400</x>
+                        <x>2832</x>
                         <y>416</y>
                         <z>0</z>
                         <width>28</width>
@@ -6238,35 +6238,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpritesCenario" uid="510">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>1</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2288</x>
-                        <y>432</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="SpritesCenario" uid="511">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -8138,13 +8109,13 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <id>5</id>
+                        <id>2</id>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1712</x>
-                        <y>80</y>
+                        <y>78</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>

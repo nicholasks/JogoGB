@@ -446,7 +446,7 @@
                         <condition id="-14" name="Compare variable" sid="920331748090779" type="System">
                             <param id="0" name="Variable">LifeSubTimer</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">1.5</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -630,6 +630,102 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="995639521856484" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="335841338991121">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="752880710852147" type="PlayerBox">
+                    <param id="0" name="Object">Slug</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="465684534258714">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="133986858272745" type="PlayerBox" />
+                        <condition id="-2" name="Compare Y" sid="422166391092337" type="PlayerBox">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">Slug.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="115620172962505" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="601402914905447" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="492167229051197" type="Slug">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">&quot;Explosion&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="204593503009859" type="Slug" />
+                    </actions>
+                </event-block>
+                <event-block sid="989207418249936">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="155650779328273" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="574342249432158" type="Function">
+                            <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="611974159914288">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="358304839152595" type="PlayerBox">
+                    <param id="0" name="Object">Bee</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="334444182724717">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="510314459929607" type="PlayerBox" />
+                        <condition id="-2" name="Compare Y" sid="802268230106896" type="PlayerBox">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Bee.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="645067341073146" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;enemy-pop&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="733279354254356" type="PlayerBox">
+                            <param id="0" name="Vector Y">Self.Y * -0.85</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="892941427581221" type="Bee">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">&quot;Explosion&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="148107845944801" type="Bee" />
+                    </actions>
+                </event-block>
+                <event-block sid="431617221625275">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="551861295828165" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="707622053711006" type="Function">
                             <param id="0" name="Name">&quot;DestroyPlayer&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>

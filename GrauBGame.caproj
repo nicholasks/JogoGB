@@ -110,7 +110,7 @@
                             <image-point name="Explosion" x="0.516129" y="0.545455" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="476695306090110" speed="5">
+                    <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="476695306090110" speed="3">
                         <frame duration="1" hotspotX="0.514286" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-1.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\sprites\frog\jump\frog-jump-2.png" />
                     </animation>
@@ -296,14 +296,313 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="BackBackground" sid="688084091722878">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\environment\layers\back.png" />
-        </object-type>
-        <object-type name="SecBackground" sid="648093698517375">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\environment\layers\middle.png" />
-        </object-type>
+        <object-folder name="Background">
+            <object-type name="BackBackground" sid="688084091722878">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\environment\layers\back.png" />
+            </object-type>
+            <object-type name="BackBackgroundF34" sid="809254140503055">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\nicho\Projects\JogoGB\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\environment\layers\background.png" />
+            </object-type>
+            <object-type name="SecBackground" sid="648093698517375">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\nicho\Desktop\Sunny-land-files\PNG\environment\layers\middle.png" />
+            </object-type>
+            <object-type name="SecBackgroundF34" sid="634988799061578">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\nicho\Desktop\middleground.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="SpritesF34">
+            <object-type name="SpritesCenarioF34" sid="911589162982012">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="438801655876410">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="109" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="136225457286349" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.476563" y="0.164063" />
+                                <point x="1" y="0.015625" />
+                                <point x="1" y="1" />
+                                <point x="0.53125" y="0.953125" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HouseF34" sid="369265342412469">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641141761440213" speed="5">
+                        <frame duration="1" hotspotX="0.502591" hotspotY="1" original-source="C:\Users\nicho\Projects\JogoGB\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\environment\props\house.png">
+                            <collision-poly>
+                                <point x="0.207254" y="0.242424" />
+                                <point x="0.497409" y="0.109091" />
+                                <point x="0.875648" y="0.145455" />
+                                <point x="0.953368" y="0.49697" />
+                                <point x="0.797927" y="0.763636" />
+                                <point x="0.497409" y="1" />
+                                <point x="0.0621762" y="0.927273" />
+                                <point x="0.0621762" y="0.49697" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite2" sid="846358164266061">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987190865168975" speed="5">
+                        <frame duration="1" hotspotX="0.502347" hotspotY="1" original-source="C:\Users\nicho\Projects\JogoGB\DATA\Sprites_Original_Files\Sunny-land-forest-files\PNG\environment\props\tree.png">
+                            <collision-poly>
+                                <point x="0.164319" y="0.156951" />
+                                <point x="0.497653" y="0.044843" />
+                                <point x="0.849765" y="0.143498" />
+                                <point x="0.962441" y="0.497758" />
+                                <point x="0.629108" y="0.64574" />
+                                <point x="0.497653" y="0.982063" />
+                                <point x="0.314554" y="0.699552" />
+                                <point x="0.0798122" y="0.497758" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpritesCenarioF34JumpThru" sid="808211224391726">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="361125565532998">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="109" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="304768956364560" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="SpritesCenario" sid="822913984661378">
             <plugin id="Sprite" />
             <behaviors>
@@ -1040,6 +1339,8 @@
     <layout-folder>
         <layout>Fase1.xml</layout>
         <layout>Fase2.xml</layout>
+        <layout>Fase3.xml</layout>
+        <layout>Fase4.xml</layout>
         <layout>GameOverScreen.xml</layout>
     </layout-folder>
     <event-folder>
@@ -1050,6 +1351,8 @@
         <event-sheet>GeneralEvents.xml</event-sheet>
         <event-sheet>GameOverEvents.xml</event-sheet>
         <event-sheet>PickupEvents.xml</event-sheet>
+        <event-sheet>EventsFase3.xml</event-sheet>
+        <event-sheet>EventsFase4.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="23" />

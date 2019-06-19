@@ -13,7 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Fase1</layout>
         <layout order="1">Fase2</layout>
         <layout order="6">GameOverScreen</layout>
-        <event-sheet active="1" order="2">PlayerEvents</event-sheet>
+        <layout active="1" order="10">Fase3</layout>
+        <event-sheet order="2">PlayerEvents</event-sheet>
         <event-sheet order="3">EnemyEvents</event-sheet>
         <event-sheet order="4">GeneralEvents</event-sheet>
         <event-sheet order="5">EventsFase1</event-sheet>
@@ -31,10 +32,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Enemies/" />
+        <folder expanded="0" path="object-folder/Background/" />
+        <folder expanded="0" path="object-folder/SpritesF34/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Eagle/" />
@@ -46,6 +49,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Ant/" />
         <folder expanded="1" path="animation-folder/Gator/" />
         <folder expanded="1" path="animation-folder/Grasshopper/" />
+        <folder expanded="1" path="animation-folder/SpritesCenarioF34/" />
+        <folder expanded="1" path="animation-folder/HouseF34/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/SpritesCenarioF34JumpThru/" />
         <folder expanded="1" path="animation-folder/SpritesCenario/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/PlayerBox/" />

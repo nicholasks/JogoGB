@@ -5,6 +5,17 @@
     <events>
         <event-group description="" sid="605288205942070" title="FROG">
             <sub-events>
+                <event-block sid="944732727128246">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="233738000743312" type="Frog" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="910610559724783" type="Frog">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="297468552756840">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="268131696078039" type="Frog">
@@ -12,10 +23,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="566220021337357" type="Frog">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action behavior="Platform" id="7" name="Simulate control" sid="608425539069265" type="Frog">
                             <param id="0" name="Control">2</param>
                         </action>
@@ -39,9 +46,9 @@
                 <event-block sid="175245151181395">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="749007002417310" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
+                            <param id="0" name="Interval (seconds)">0.1</param>
                         </condition>
-                        <condition id="-3" name="Is on-screen" sid="524046007494924" type="Player" />
+                        <condition id="-3" name="Is on-screen" sid="965823704559117" type="Frog" />
                         <condition id="-7" name="Compare instance variable" sid="378439618418277" type="Frog">
                             <param id="0" name="Instance variable">currentTiming</param>
                             <param id="1" name="Comparison">2</param>
@@ -51,7 +58,7 @@
                     <actions>
                         <action id="-11" name="Add to" sid="986457452343543" type="Frog">
                             <param id="0" name="Instance variable">currentTiming</param>
-                            <param id="1" name="Value">0.5</param>
+                            <param id="1" name="Value">0.1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -110,8 +117,8 @@
                         <action id="-3" name="Create object" sid="797839000464629" type="System">
                             <param id="0" name="Object to create">Frog</param>
                             <param id="1" name="Layer">&quot;Main&quot;</param>
-                            <param id="2" name="X">784</param>
-                            <param id="3" name="Y">320</param>
+                            <param id="2" name="X">544</param>
+                            <param id="3" name="Y">208</param>
                         </action>
                     </actions>
                 </event-block>
@@ -122,7 +129,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="184783040278134" type="Frog">
                             <param id="0" name="Instance variable">timing</param>
-                            <param id="1" name="Value">random(1.0,3.3)</param>
+                            <param id="1" name="Value">random(1.8,3.0)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -130,7 +137,7 @@
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="634854873775555" type="Frog">
                             <param id="0" name="Instance variable">currentTiming</param>
-                            <param id="1" name="Comparison">4</param>
+                            <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">Frog.timing</param>
                         </condition>
                     </conditions>
